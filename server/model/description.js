@@ -18,7 +18,7 @@ const DescriptionSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    categories: {
+    courses: {
         type: Array,
         required: false   
     },

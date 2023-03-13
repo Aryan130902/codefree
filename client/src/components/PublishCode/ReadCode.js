@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useEffect,useState } from 'react'
+import { Link, useSearchParams } from 'react-router-dom';
+
+import {API} from '../../service/api'
 
 
+const GetAllCode = () => {
 
+  const [description,setDescrption] = useState([]); 
+  const [searchParams] = useSearchParams();
+  const category = searchParams.get('category');
 
-const ReadCode = () => {
+  useEffect(() => {
+    const fetchData = async () => { 
+        let response = await API.getAllPosts({ category : category || '' });
+        if (response.isSuccess) {
+            getPosts(response.data);
+        }
+    }
+    fetchData();
+}, [category]);
+
   return (
     <div className="pr-5 pb-8 pt-2 mx-auto">
          <div className="flex flex-wrap m-4">
@@ -12,10 +29,6 @@ const ReadCode = () => {
           <h2 className="text-lg text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
           <p className="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
           <a className="text-indigo-500 inline-flex items-center mt-4">Learn More
-            <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14"></path>
-              <path d="M12 5l7 7-7 7"></path>
-            </svg>
           </a>
         </div>
       </div>
@@ -24,4 +37,4 @@ const ReadCode = () => {
   )
 }
 
-export default ReadCode
+export default GetAllCode

@@ -1,7 +1,7 @@
 import React from 'react'
 import SideTable from './SideTable'
 import Appbar from './Appbar'
-import ReadCode from './ReadCode'
+import GetAllCode from './GetAllCode'
 
 
 const ReadPage = () => {
@@ -13,7 +13,7 @@ const ReadPage = () => {
       <SideTable/>
     </div>
     <div className='flex-auto'>
-      <ReadCode/>
+      <GetAllCode/>
     </div>
   </div>
 </div>
