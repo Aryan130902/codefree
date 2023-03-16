@@ -11,7 +11,7 @@ const initialCode ={
   date: new Date(),
   body:'',
   file:'',
-  categories:'',
+  courses:'',
 }
 
 
@@ -71,7 +71,7 @@ const PublishCode = () => {
     }
 
     getFile();
-    description.categories = courses;
+    description.courses = courses;
     description.username=account.username;
 
   },[file])
