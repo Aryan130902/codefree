@@ -1,6 +1,6 @@
 import React from 'react'
-import SideTable from './SideTable'
-import Appbar from './Appbar'
+import SideTable from '../PublishCode/SideTable'
+import Appbar from '../PublishCode/Appbar'
 import GetAllCode from './GetAllCode'
 
 

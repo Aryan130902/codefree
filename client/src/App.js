@@ -11,11 +11,12 @@ import {
 
 import { useState } from 'react';
 import DataProvider from './context/DataProvider';
+
 //IMPORTING COMPONENTS 
 import Toggleaccount from './components/Account/Toggleaccount';
 import Home from './components/Home/Home';
 import CreatePage from './components/PublishCode/CreatePage';
-import ReadPage from './components/PublishCode/ReadPage';
+import ReadPage from './components/ReadCode/ReadPage';
 
 
 
