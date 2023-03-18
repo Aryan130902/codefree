@@ -49,6 +49,7 @@ const PublishCode = () => {
   const saveDescription = async() => {
    let response = await API.createDescription(description);
    if(response.isSuccess){
+    console.log('navigate to home')
     navigate('/')
    }
   }
