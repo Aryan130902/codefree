@@ -17,7 +17,7 @@ import Toggleaccount from './components/Account/Toggleaccount';
 import Home from './components/Home/Home';
 import CreatePage from './components/PublishCode/CreatePage';
 import ReadPage from './components/ReadCode/ReadPage';
-import DetailView from './details/detailView';
+import DetailView from './components/details/detailView';
 
 
 
@@ -48,6 +48,7 @@ function App() {
         <Route path="/login" element = { <Toggleaccount isUserAuthenticated={isUserAuthenticated} /> } />
 
         <Route path="/" element ={ <div><Home/></div> } />
+        
 
         <Route path='/createPage' element={<PrivateRoute isAuthenticated={isAuthenticated} />} >
          <Route path="/createPage" element ={<div><CreatePage/></div>} />

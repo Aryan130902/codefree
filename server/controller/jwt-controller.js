@@ -17,7 +17,7 @@ export const authenticateToken = (request, response, next) => {
         if (error) {
             return response.status(403).json({ msg: 'invalid token' })
         }
-
+        
         request.user = user;
         next();
     })

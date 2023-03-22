@@ -15,7 +15,7 @@ const Appbar = () => {
       
         <div className='flex'>
           <img
-            src="logo.png"
+            src="../../../public/logo.png"
             className="mr-3 h-8"
             alt="Logo"
           />

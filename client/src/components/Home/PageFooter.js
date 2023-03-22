@@ -17,17 +17,14 @@ const PageFooter = () => {
     year={2023}
   />
   <Footer.LinkGroup>
-    <Footer.Link href="#">
+    <Footer.Link href="/">
       About
     </Footer.Link>
     <Footer.Link href="#">
-      Privacy Policy
-    </Footer.Link>
-    <Footer.Link href="#">
-      Licensing
-    </Footer.Link>
-    <Footer.Link href="#">
       Contact
+    </Footer.Link>
+    <Footer.Link href="https://github.com/Aryan130902">
+      Github
     </Footer.Link>
   </Footer.LinkGroup>
 </Footer>

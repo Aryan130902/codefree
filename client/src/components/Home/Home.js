@@ -7,6 +7,7 @@ import PageFooter  from '../Home/PageFooter';
 import Courses from '../Home/Courses';
 import Header from '../Home/Header';
 import Create from '../Home/Create';
+import DetailView from '../details/detailView';
 
 
 const Home = () => {
@@ -101,6 +102,7 @@ const Home = () => {
       </div>
       <div ref={createSection}>
         <Create/>
+        {/* <DetailView/> */}
       </div>
       <div ref={footerSection}>
         <PageFooter/>
