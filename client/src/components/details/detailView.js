@@ -10,7 +10,7 @@ const DetailView = () => {
       <Appbar/>
     <div className='flex flex-row flex-wrap'>
     <div className='mx-auto'>
-      <FileUploader/>
+      <Article/>
     </div>
   </div>
 </div>

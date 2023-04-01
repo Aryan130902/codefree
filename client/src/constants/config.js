@@ -28,5 +28,5 @@ export const SERVICE_URLS = {
     uploadFile:{url: '/file/upload', method:'POST'},
     createDescription: {url: '/create', method: 'POST'},
     getAllDescription: {url:'/descriptions',method: 'GET', params: true},
-    getArticleById:{urk:'descriptions',method:'GET',query:true}
+    getArticleById:{url:'descriptions',method:'GET',query:true}
 }

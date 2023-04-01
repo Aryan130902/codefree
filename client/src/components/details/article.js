@@ -3,7 +3,8 @@ import { useParams } from 'react-router'
 import { useEffect, useState, useNavigate } from 'react';
 import { API } from '../../service/api';
 import { useContext } from 'react';
-
+import { DataContext } from '../../context/DataProvider';
+import { categories } from '../../constants/data';
 
 const Article = () => {
 
@@ -34,7 +35,7 @@ const Article = () => {
                     <a rel="noopener noreferrer" href="#" target="_blank" className="underline dark:text-violet-400">
                         <span itemprop="name">Leroy Jenkins</span>
                     </a>on
-                    <time datetime="2021-02-12 15:34:18-0200">Feb 12th 2021</time>
+                <time datetime="2021-02-12 15:34:18-0200">Feb 12th 2021</time>
                 </p>
             </div>
             <div className="dark:text-gray-100">

@@ -4,7 +4,7 @@ import { getAccessToken,getType } from '../utils/common-utils.js';
 
 
 
-const API_URL = 'http://localhost:8000'
+const API_URL = 'https://breakable-eel-toga.cyclic.app';
 
 const axiosInstance = axios.create({
     baseURL: API_URL,

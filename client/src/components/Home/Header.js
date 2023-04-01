@@ -12,7 +12,7 @@ const Header = ({}) => {
     
       <h1 className="sm:text-4xl font-primarylightfont lg:text-6xl text-primaryheading font-light lg:leading-14" >
      <span className='text-primary font-primarylightfont font-semibold'> Code Free  </span>
-    provide all the code of your assingments for free! 
+    provide all the code of your assignments for free! 
       </h1>
       <p className="font-primaryfont text-lg pr-15 py-5 pr- mb-8  text-secondary ">Get your assignment code for free, and feel free to add your contribution</p>
       
