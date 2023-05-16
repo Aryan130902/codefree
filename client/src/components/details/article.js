@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router'
-import { useEffect, useState, useNavigate } from 'react';
+import { useEffect, useState} from 'react';
+import { useNavigate } from 'react-router';
 import { API } from '../../service/api';
 import { useContext } from 'react';
 import { DataContext } from '../../context/DataProvider';

@@ -49,7 +49,6 @@ function App() {
 
         <Route path="/" element ={ <div><Home/></div> } />
         
-
         <Route path='/createPage' element={<PrivateRoute isAuthenticated={isAuthenticated} />} >
          <Route path="/createPage" element ={<div><CreatePage/></div>} />
         </Route>
