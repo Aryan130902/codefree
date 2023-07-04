@@ -100,10 +100,6 @@ const Home = () => {
       <div ref={courseSection}>
        <Courses/>
       </div>
-      <div ref={createSection}>
-        <Create/>
-        {/* <DetailView/> */}
-      </div>
       <div ref={footerSection}>
         <PageFooter/>
       </div>

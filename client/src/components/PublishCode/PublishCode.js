@@ -19,8 +19,7 @@ const PublishCode = () => {
 
 
   const [description,setDescription] = useState(initialCode);
-  const [file,setFile] = useState([]);
-  const [error,setError] = useState('');
+  const [file, setFile] = useState({});
   const {account} = useContext(DataContext);
   const handleChange = (e) => {
 
@@ -28,17 +27,17 @@ const PublishCode = () => {
 
   }
 
-  const handleUpload = (e) => {
-    setFile(e.target.files);
-  //   const selectedFile = e.target.files[0];
+  // const handleUpload = (e) => {
+  //   ;
+  // //   const selectedFile = e.target.files[0];
 
-  // if (selectedFile.size > 500000) {
-  //   setError("File size should be less than 500kb");
-  // } else {
-  //   setFile(selectedFile);
-  //   setError("");
+  // // if (selectedFile.size > 500000) {
+  // //   setError("File size should be less than 500kb");
+  // // } else {
+  // //   setFile(selectedFile);
+  // //   setError("");
+  // // }
   // }
-  }
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -59,21 +58,20 @@ const PublishCode = () => {
       if(file){
         const data = new FormData();
         data.append('name',file.name);
-
-        for (let i = 0; i < file.length; i++) {
-          data.append('file', file[i]);
-        }
+        data.append('file', file);
+        
 
         
         //API CALL
         const response = await API.uploadFile(data);
-        description.file = response.data;
+        console.log(response.data);
+        description.file = response.data.url;
       }
     }
 
     getFile();
     description.courses = courses;
-    description.username=account.username;
+    description.username = account.username;
 
   },[file])
 
@@ -105,8 +103,8 @@ const PublishCode = () => {
         <div className='flex flex-row flex-wrap drop-shadow-md'>
             <input className="font-primaryfont my-2 block w-4/6 text-sm text-gray-900 rounded-lg cursor-pointer bg-bgsecondary focus:ring-heading focus:border-heading"
             type="file"
-            onChange={(e) => handleUpload(e)}
             name='file' 
+            onChange={(e) => setFile(e.target.files[0])}
             multiple/>
             <button 
             type="button" 
@@ -116,7 +114,6 @@ const PublishCode = () => {
               Publish
             </button>
         </div>
-        {error && <p className='ml-2 text-red-600 font-primaryfont'>{error}</p>}
     </div>
   )
 }

@@ -49,7 +49,6 @@ const processResponse = (response) => {
     } else {
         return {
             isFailure: true,
-            // status: response?.status,
             err: response.data.err,
             code: response?.code
         }

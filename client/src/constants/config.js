@@ -26,7 +26,7 @@ export const SERVICE_URLS = {
     userSignup: { url: '/signup', method: 'POST' },
     userLogin: { url: '/login', method: 'POST' },
     uploadFile:{url: '/file/upload', method:'POST'},
-    createDescription: {url: '/create', method: 'POST'},
+    createDescription: {url: 'create', method: 'POST'},
     getAllDescription: {url:'/descriptions',method: 'GET', params: true},
     getArticleById:{url:'descriptions',method:'GET',query:true}
 }
